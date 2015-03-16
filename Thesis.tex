@@ -1,0 +1,198 @@
+% Select one class
+%\documentclass{pucthesis}		% For DVI
+\documentclass[pdftex]{pucthesis}	% For pdfLaTeX
+%\documentclass[spanish]{pucthesis}		% For DVI, in spanish
+%\documentclass[pdftex,spanish]{pucthesis}	% For pdfLaTeX, in spanish
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      Nota: si usas español, algunos nombres      %
+%      debes cambiarlos manualmente en este     %
+%        documento. En teoría, nunca deberías       %
+%           modificar el archivo pucthesis.cls              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%
+%   Packages	 %
+%%%%%%%%%
+
+% Floats
+\usepackage{graphicx}
+\usepackage{float}
+\floatstyle{boxed}
+\restylefloat{figure}
+\usepackage{subfigure}
+\usepackage{color}
+
+% Math packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Closest font to Times New Roman
+\usepackage{times}
+
+% To make pretty tables
+\usepackage{booktabs}
+\usepackage{multirow}
+
+% To avoid underfull errors in the bibliography
+\usepackage{etoolbox}
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+
+% To make cites and references
+\usepackage[hidelinks,pdfusetitle,pdfdisplaydoctitle]{hyperref}
+\usepackage[notocbib]{apacite} 
+\usepackage{doi}
+\renewcommand{\doitext}{}
+
+%--------- NEW ENVIRONMENTS --------- You are free to remove or use it
+\newtheorem{definition}{\bf Definition}[chapter]
+\newtheorem{property}{Property}[chapter]
+\newtheorem{claim}{Claim}[chapter]
+\newtheorem{lemma}{\bf Lemma}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{theorem}{\noindent \bf Theorem}[chapter]
+\newtheorem{corollary}{\bf Corollary}[chapter]
+\newtheorem{pf}{Proof}[chapter]
+\newtheorem{example}{\bf Example}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+
+\begin{document}
+
+\mdate{Month Day, Year}         % date manuscript changed
+\version{1}                                     % manuscript version #
+
+\title[(LONG THESIS TITLE)]
+   {\bf (LONG THESIS TITLE)}       
+\author[Author's Name]{Author's name}
+
+\address{Escuela de Ingenier\'ia\\
+                   Pontificia Universidad Cat\'olica de Chile\\ 
+                   Vicu\~na Mackenna 4860\\
+                  Santiago, Chile\\
+                  {\it Tel.\/} : 56 (2) 354-2000}
+\email{username@uc.cl}
+
+\facultyto    {the School of Engineering}
+%\department   {}
+\faculty                             {Faculty of Engineering}
+\degree                  {Master of Science in Engineering}  %   {Mag\'ister en Ciencias de la Ingenier\'ia}  %        
+                                 % or {Doctor in Engineering Sciences}    % {Doctor en Ciencias de la Ingenier\'ia}
+\advisor                            {Professor's name}
+\committeememberA {Member A}
+\guestmemberA            {Member B}
+\ogrsmember                 {Member C}
+\subject                            {Structural Engineering}
+\date                                 {Month Year}
+\copyrightname             {Author's name}
+\copyrightyear               {MMXV}
+\dedication                      {Gratefully to my parents and siblings}
+
+%%%%%%%%%%%%%%%%%%%%
+%       PRELIMINARIES                              %
+%----------------------------------------------------%
+%      page i & ii: cover page                   %
+%      page iii: dedication                         %
+%%%%%%%%%%%%%%%%%%%%
+
+\NoChapterPageNumber
+\pagenumbering{roman}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%
+%   EXTRA PAGES                                     %
+%----------------------------------------------------%
+%      page --: not used                             %
+%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%\thispagestyle{empty}
+
+%----------------------------------------------------------------------%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%      page v: ACKNOWLEDGEMENTS                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\phantomsection \label{acknowledgements} % Comment if hyperref is unused
+\chapter*{ACKNOWLEDGEMENTS}           
+\input{./chapters/acknowledgments.tex}
+
+\cleardoublepage
+
+%----------------------------------------------------------------------%
+
+%%%%%%%%%%%%%%%%%%
+%          page v & up ---                      %
+%            Table of contents              %
+%            List of figures                     %
+%            List of tables                      %
+%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{\contentsname}{toc}
+\tableofcontents
+\phantomsection \label{listoffigures}
+\listoffigures
+\phantomsection \label{listoftables}
+\listoftables
+\cleardoublepage
+
+%----------------------------------------------------------------------%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%      page x & xi: ABSTRACT - RESUMEN        %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\phantomsection \label{abstract}
+\chapter*{ABSTRACT}
+\input{./chapters/abstract.tex}
+\cleardoublepage
+
+\phantomsection \label{resumen}
+\chapter*{RESUMEN}
+\input{./chapters/resumen.tex}
+\cleardoublepage
+
+%%%%%%%%%%%%%
+%   TEXT  OF THESIS     %
+%%%%%%%%%%%%%
+
+\pagenumbering{arabic}
+
+\chapter[INTRODUCTION]{Introduction}
+\input{./chapters/introduction.tex}
+
+\chapter[CHAPTER 1]{Chapter 1} \label{ch1}
+\input{./chapters/chapter1.tex}
+
+\chapter[CHAPTER 2]{Chapter 2} \label{ch2}
+\input{./chapters/chapter2.tex}
+
+\chapter[CONCLUSIONS]{Conclusions}
+\input{./chapters/conclusions.tex}
+
+%%%%%%%%%%%%%
+%       REFERENCES        %
+%%%%%%%%%%%%%
+
+\cleardoublepage
+\phantomsection \label{references}
+\bibliographystyle{apacite}
+\renewcommand{\bibname}{REFERENCES}
+\bibliography{Thesis}
+
+%%%%%%%%%%%%
+%      APPENDICES      %
+%%%%%%%%%%%%
+
+\appendix % It is like a chapter, so each appendix (A, B, C...) must to be considered as a section
+
+\newpage
+\section[First Appendix]{First Appendix}
+\input{./chapters/appendix1.tex}
+
+\newpage
+\section[An Interesting Short Story]{An Interesting Short Story}
+\input{./chapters/appendix2.tex}
+
+\end{document}
