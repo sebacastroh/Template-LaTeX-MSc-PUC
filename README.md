@@ -4,7 +4,7 @@ El template <i>Thesis.tex</i> y la clase <i>pucthesis.cls</i> han sido diseñado
 
 El formato del template cumple con las especificaciones de Bibliotecas UC (<url>http://sibuc.uc.cl</url>).
 
-Deseo remarcar que este template **no es oficial**. Hasta el momento ninguna tesis ha sido rechazada por utilizar este formato (hasta Marzo de 2015 se ha probado con 4 estudiantes). Hay que informar, eso sí, que en el DIPEI al parecer no están completamente actualizados con el formato, pues siempre alegan con respecto a la sangría presente en la bibliografía. Sin embargo, cuando se les dice que en Bibliotecas UC especifican que ese es el formato APA, aceptan. Ojalá pronto se actualicen.
+Deseo remarcar que este template **no es oficial**, aunque su función es corregir el oficial del SIDING. Hasta el momento ninguna tesis ha sido rechazada por utilizar este formato (hasta Marzo de 2015 se ha probado con 4 estudiantes). Hay que informar, eso sí, que en el DIPEI al parecer no están completamente actualizados con el formato, pues siempre alegan con respecto a la sangría presente en la bibliografía. Sin embargo, cuando se les dice que en Bibliotecas UC especifican que ese es el formato APA, aceptan. Ojalá pronto se actualicen.
 
 ## Pasos de compilación:
 
