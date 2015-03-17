@@ -20,6 +20,6 @@ El template llama a los paquetes fundamentales para generar correctamente la tes
 
 - Esta clase no fue escrita totalmente por mí. Me basé en el trabajo del profesor Miguel Torres, de la PUC, aunque modifiqué muchas líneas. De todas formas, deseo dejar en claro que sin su trabajo previo no podría haber generado este archivo.
 - Lean atentamente el archivo *Thesis.tex*, vean cómo se llaman a los capítulos. Noten que los apéndices se consideran como secciones, no como capítulos. Tuve que hacer esto para que el TOC quedara bien (una larga historia)
-- Por defecto el template está en inglés y con pdflatex, pero ustedes pueden escoger la opción español y/o desactivar el pdflatex si utilizan imágenes de formato PS.
+- Por defecto el template está en inglés y con pdflatex, pero ustedes pueden escoger la opción español y/o desactivar el pdflatex si utilizan imágenes de formato PS o EPS.
 
 Espero les sea de mucha utilidad, cualquier problema escriban en el apartado Issues, no me escriban a mi correo por favor. Estoy seguro que la duda de uno es la duda de varios.
