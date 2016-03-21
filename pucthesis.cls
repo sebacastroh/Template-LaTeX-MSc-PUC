@@ -26,6 +26,13 @@
 
 \newif\if@nopunc\@nopuncfalse
 
+% Space before and after the thesis' title in first and second page
+\newlength{\beftitle}
+\newlength{\afttitle}
+
+\setlength{\beftitle}{105\p@\@plus24\p@}
+\setlength{\afttitle}{65\p@}
+
 % By default, LaTeX uses margins equals to 25mm (top and odd)
 % -25mm + 40mm = 15mm
 % Top
@@ -441,7 +448,7 @@
        \rule[0pt]{\auxdist}{.5pt}
        }%end centering
      } %end vtop
-  \vskip105\p@\@plus24\p@
+  \vskip\beftitle %  \vskip105\p@\@plus24\p@
   %%
   %% Title
   %%
@@ -459,7 +466,7 @@
      % \global\dimen@i\prevdepth
      }%end vtop
   \prevdepth\dimen@i
-  \vskip65\p@%
+  \vskip\afttitle %  \vskip65\p@%
   %%
   %% Author(s)
   %%
@@ -605,7 +612,7 @@
        \rule[0pt]{\auxdist}{.5pt}
        }%end centering
      } %end vtop
-  \vskip105\p@\@plus24\p@
+  \vskip\beftitle %  \vskip105\p@\@plus24\p@
   %%
   %% Title
   %%
@@ -623,7 +630,7 @@
      % \global\dimen@i\prevdepth
      }%end vtop
   \prevdepth\dimen@i
-  \vskip65\p@%
+  \vskip\afttitle %  \vskip65\p@%
   %%
   %% Author(s)
   %%
