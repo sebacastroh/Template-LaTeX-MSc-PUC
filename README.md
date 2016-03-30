@@ -16,6 +16,10 @@ Las instrucciones son muy simples:
 
 El template llama a los paquetes fundamentales para generar correctamente la tesis.
 
+## Preguntas frecuentes
+
+- A veces el título de la tesis es bastante largo y hay elementos de las primeras páginas que se pasan a las siguientes. Para corregir eso agregué una opción que permite ajustar el espacio antes y después del título. Un poco antes de empezar el documento hay unas líneas comentadas con la explicación apropiada.
+
 ## Comentarios adicionales
 
 - Esta clase no fue escrita totalmente por mí. Me basé en el trabajo del profesor Miguel Torres, de la PUC, aunque modifiqué muchas líneas. De todas formas, deseo dejar en claro que sin su trabajo previo no podría haber generado este archivo.
