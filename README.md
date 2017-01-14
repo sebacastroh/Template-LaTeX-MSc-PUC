@@ -14,7 +14,13 @@ Las instrucciones son muy simples:
 2. Compilar Thesis.bib con bibtex
 3. Compilar dos veces Thesis.tex con pdflatex o similar
 
+Otra alternativa, que no he probado pero que supuestamente ahorra todos los pasos antes descritos, es utilizar [`latexmk`](http://tex.stackexchange.com/a/249243/49596) 
+
 El template llama a los paquetes fundamentales para generar correctamente la tesis.
+
+## Preguntas frecuentes
+
+- A veces el título de la tesis es bastante largo y hay elementos de las primeras páginas que se pasan a las siguientes. Para corregir eso agregué una opción que permite ajustar el espacio antes y después del título. Un poco antes de empezar el documento hay unas líneas comentadas con la explicación apropiada.
 
 ## Comentarios adicionales
 
